@@ -1,0 +1,9 @@
+<div class="categories">
+  <h1 class="categories__title">Категории</h1>
+  <div class="categories__wrap" *ngIf="categories$ | async as categories;">
+    <div class="categories__item" *ngFor="let category of categories">
+      <div class="categories__item-title">{{category.name}}</div>
+      <a [routerLink]="['/categories',category.id]" class="categories__item-link">Товары категории</a>
+    </div>
+  </div>
+</div>

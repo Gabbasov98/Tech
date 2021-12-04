@@ -1,0 +1,28 @@
+<div class="products">
+  <h1 class="products__title">{{categoryTitle}}</h1>
+  <div class="products__wrap" *ngIf="products$ | async as products;">
+    <table *ngIf="products.length !== 0; else empty">
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Бренд</th>
+          <th>Стоимость</th>
+          <th>Категории</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{product.name}}</td>
+          <td>{{product.brandName}}</td>
+          <td>{{product.price}} $</td>
+          <td>{{categoryTitle}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #empty>
+      <div class="center">
+        У вас нет ни одного товара в этой категории
+      </div>
+    </ng-template>
+  </div>
+</div>

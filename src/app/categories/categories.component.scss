@@ -1,0 +1,17 @@
+.categories{
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+  }
+  &__item{
+    padding: 40px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #000;
+    &-title{
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
